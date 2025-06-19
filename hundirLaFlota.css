@@ -1,0 +1,230 @@
+/* === Contenedores Principales === */
+
+.contenedor-tablero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+#contenedorTableros {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    max-width: 900px;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+
+}
+
+.tituloTablero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+#contenedorBotones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* === Tableros === */
+
+#tableroUsuario,
+#tableroIA {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    gap: 2px;
+    background-color: #cce6ff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Textos === */
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+h3 {
+    display: flex;
+    flex-direction: wrap;
+}
+
+/* === Celdas === */
+
+.celda {
+    pointer-events: auto;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #9b9b9b;
+    background-color: lightblue;
+    user-select: none;
+    /* Evita seleccionar texto accidentalmente */
+}
+
+.celda:hover {
+    background-color: #9ecbf7;
+}
+
+.celda.barco {
+    background-color: navy;
+}
+
+.celda.impacto {
+    background-color: rgba(255, 154, 45, 0.892);
+}
+
+.celda.agua-disparo {
+    background-color: rgb(107, 155, 251);
+}
+
+/* === Botones === */
+
+button {
+    padding: 12px 24px;
+    margin: 4px;
+    background: linear-gradient(135deg, #ff9900, #ff6f00);
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 153, 0, 0.4);
+    transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ffb833, #ff8f00);
+    box-shadow: 0 6px 12px rgba(255, 143, 0, 0.6);
+    transform: translateY(-2px);
+}
+
+#botonDireccion {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#botonDireccion:hover {
+    background: linear-gradient(135deg, #e60000, #990000);
+    box-shadow: 0 6px 12px rgba(230, 0, 0, 0.6);
+    transform: translateY(-2px);
+}
+
+#btnCargar {
+    background: linear-gradient(135deg, #09e2c5, #06a48c);
+    box-shadow: 0 4px 8px rgba(9, 226, 197, 0.4);
+}
+
+#btnCargar:hover {
+    background: linear-gradient(135deg, #26f0d5, #04a183);
+    box-shadow: 0 6px 12px rgba(4, 161, 131, 0.6);
+    transform: translateY(-2px);
+}
+
+/* === Estados especiales === */
+
+.boton-oculto {
+    display: none;
+}
+
+.boton-desactivado {
+    background-color: #ffffffce;
+    color: #ffffff;
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+.oculto {
+    display: none;
+}
+
+/* === Contenedores adicionales === */
+
+#barcos {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* === Media Queries para Responsive === */
+
+@media (max-width: 768px) {
+    #contenedorTableros {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #tableroIA,
+    #tableroUsuario {
+        grid-template-columns: repeat(10, 35px);
+        gap: 1.5px;
+    }
+
+    .celda {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    #contenedorBotones {
+        gap: 8px;
+    }
+
+    button,
+    #botonDireccion {
+        padding: 10px 18px;
+        font-size: 1em;
+        margin: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #tableroIA,
+    #tableroUsuario {
+        grid-template-columns: repeat(10, 28px);
+        gap: 1px;
+    }
+
+    .celda {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    button,
+    #botonDireccion {
+        padding: 8px 14px;
+        font-size: 0.9em;
+        margin: 2px;
+    }
+}

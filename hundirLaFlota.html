@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hundir la Flota</title>
+    <link rel="stylesheet" href="hundirLaFlota.css">
+    </link>
+    <script type="module" src="logica/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <h1>Hundir la flota</h1>
+    <div id="contenedorBotones">
+        <button id="portaaviones">Portaaviones</button>
+        <button id="acorazado">Acorazado</button>
+        <button id="crucero">Crucero</button>
+        <button id="submarino">Submarino</button>
+        <button id="destructor">Destructor</button>
+        <button id="botonDireccion">Cambiar dirección</button>
+        <button id="iniciarJuego" class="oculto">Iniciar Juego</button>
+    </div>
+
+    <!--botones de funcionalidad-->
+    <div id="btnFuncionalidad">
+        <button id="reiniciarJuego" class="oculto">🔄 Volver a jugar</button>
+        <button id="btnGuardar" class="oculto">Guardar partida</button>
+        <button id="btnCargar">Cargar partida</button>
+    </div>
+
+    <div id="contenedorTableros">
+        <div class="tituloTablero">
+            <h3 id="titulo">Tablero Usuario</h3>
+            <div id="tableroUsuario" class="visible"></div>
+        </div>
+        <div class="tituloTablero">
+            <h3 id="tableroEnemigo">Tablero Enemigo</h3>
+            <div id="tableroIA" class="oculto"></div>
+        </div>
+        <div id="resultado"></div>
+    </div>
+</body>
