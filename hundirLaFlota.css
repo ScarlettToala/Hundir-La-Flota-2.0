@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: #f0f0f0;
     padding: 20px;
     box-sizing: border-box;
@@ -13,10 +13,12 @@
 
 #contenedorTableros {
     display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
     align-items: center;
     gap: 40px;
     margin-top: 20px;
-    max-width: 900px;
     flex-wrap: nowrap;
     box-sizing: border-box;
 
@@ -42,7 +44,7 @@
 #tableroUsuario,
 #tableroIA {
     display: grid;
-    grid-template-columns: repeat(10, 50px);
+    grid-template-columns: repeat(10, 30px);
     gap: 2px;
     background-color: #cce6ff;
     padding: 10px;
@@ -69,8 +71,8 @@ h3 {
 .celda {
     pointer-events: auto;
     font-size: 24px;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +103,7 @@ h3 {
 /* === Botones === */
 
 button {
-    padding: 12px 24px;
+    padding: 10px 22px;
     margin: 4px;
     background: linear-gradient(135deg, #ff9900, #ff6f00);
     color: white;
@@ -121,10 +123,10 @@ button:hover {
     transform: translateY(-2px);
 }
 
-#botonDireccion {
+#botonDireccion, #iniciarJuego {
     background: linear-gradient(135deg, #ff0000, #cc0000);
     box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
-    padding: 12px 24px;
+    padding: 10px 22px;
     font-size: 1.1em;
     font-weight: 600;
     border-radius: 8px;
@@ -134,13 +136,21 @@ button:hover {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#botonDireccion:hover {
+#botonDireccion:hover , #iniciarJuego:hover {
     background: linear-gradient(135deg, #e60000, #990000);
     box-shadow: 0 6px 12px rgba(230, 0, 0, 0.6);
     transform: translateY(-2px);
 }
 
+#btnFuncionalidad{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 #btnCargar {
+    display: flex;
+    align-items: center;
+    align-content: center;
     background: linear-gradient(135deg, #09e2c5, #06a48c);
     box-shadow: 0 4px 8px rgba(9, 226, 197, 0.4);
 }
@@ -180,7 +190,7 @@ button:hover {
 @media (max-width: 768px) {
     #contenedorTableros {
         flex-direction: column;
-        width: 100%;
+        width: 90%;
     }
 
     #tableroIA,

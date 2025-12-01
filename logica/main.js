@@ -1,6 +1,6 @@
 import { Tablero } from '../clases/Tablero.js';
 import { Juego } from '../clases/juegoDOM.js';
-import { arrayBarcos, barcosJSON } from '../constantes.js';
+import { arrayBarcos, barcosJSON } from '../logica/constantes.js';
 import { UITablero } from '../ui/uiTablero.js';
 
 //Globales

@@ -1,6 +1,6 @@
 import { Celda } from './Celda.js';
 import { Barco } from './Barco.js';
-import { barcosJSON } from '../constantes.js';
+import { barcosJSON } from '../logica/constantes.js';
 
 export class Tablero {
     constructor(esIA = false, tamanyo = 10) {
